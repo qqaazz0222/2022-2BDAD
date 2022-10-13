@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <% include ./head.ejs %>
+    <!-- 변수를 html안에서 사용하고 싶을때 변수명이 n -->
+    <%- n %>
+    <!-- 함수나 구문 for if문 등등을 html안에서 사용하고 싶을때 -->
+    <% if ~~~ %>
+
     <body>
         <% include ./navbar.ejs%>
         <h1>Hi, <%- title %></h1>
