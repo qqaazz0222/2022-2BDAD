@@ -3,9 +3,14 @@
     <% include ./head.ejs %>
     <body>
         <% include ./navbar.ejs%>
-        <h1>Hi, <%- title %></h1>
-        <% for(var i = 0; i < test2.length; i++) { %>
-        <p><%- test2[i].id %> / <%- test2[i].title %></p>
+        <h1>포스트 삭제</h1>
+        <% for (var i = 0; i < post.length; i++) { %>
+        <h3><%= post[i].title %></h3>
+        <p><%= post[i].value %></p>
+        <a href="/post/del/<%= post[i].id %>">
+            <button>글 삭제</button>
+        </a>
+        <br /><br />
         <% } %>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
