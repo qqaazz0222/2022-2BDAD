@@ -1,5 +1,14 @@
+html {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F8F9FA;
+}
+
 body {
-    padding: 0 240px;
+    width: 100vw;
+    max-width: 1280px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
