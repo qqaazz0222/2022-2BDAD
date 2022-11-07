@@ -1,25 +1,60 @@
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Blog</a>
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"
-                        >홈</a
-                    >
-                </li>
-            </ul>
-        </div>
+<style>
+    a {
+        text-decoration: none;
+    }
+    .navbar {
+        width: 100%;
+        height: 96px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        margin-left: 8px;
+        font-size: 36px;
+    }
+    .login {
+        margin-right: 8px;
+    }
+    .login > a {
+        padding: 8px 16px;
+        background: black;
+        color: white;
+        font-size: 16px;
+        border-radius: 128px;
+        transition: all 0.3s;
+    }
+    .login > a:hover {
+        background: #333;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    .menu > .menu_btn {
+        padding: 8px 24px;
+        font-size: 18px;
+        color: #ccc;
+    }
+    .menu > .menu_btn:first-child {
+        margin-left: 8px;
+    }
+    .menu > .sel {
+        color: black;
+        border-bottom: 2px solid black;
+    }
+</style>
+<div class="navbar">
+    <div class="logo">블로그</div>
+    <div class="login">
+        <a href="">로그인</a>
     </div>
-</nav>
+</div>
+<div class="menu">
+    <div class="menu_btn sel">트렌딩</div>
+    <div class="menu_btn">최신</div>
+</div>

@@ -1,0 +1,120 @@
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 300px;
+        height: 380px;
+        margin: 8px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+    .card > .img {
+        height: 168px;
+        background: #666;
+    }
+    .card > .img > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card > .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+    }
+    .card > .content > .title {
+        font-size: 16px;
+        font-weight: bold;
+        color: #212529;
+        margin-bottom: 4px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .card > .content > .text {
+        flex: 1;
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #495057;
+        line-height: 1.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .card > .content > .info {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #868e96;
+    }
+    .card > .user {
+        padding: 10px 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 46px;
+        border-top: 1px solid #eee;
+        font-size: 12px;
+        color: #868e96;
+    }
+    .card > .user > .writer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .card > .user > .writer > .img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        background: #666;
+        margin-right: 8px;
+    }
+    .card > .user > .writer > .name > strong {
+        font-size: 12px;
+        color: #212529;
+    }
+    .card > .user > .writer > .like {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 12px;
+        color: #212529;
+    }
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: rgb(0 0 0 / 8%) 0px 12px 20px 0px;
+    }
+</style>
+<div class="card">
+    <div class="img">
+        <img
+            src=""
+            alt=""
+            onerror="this.src='https://cdn-icons-png.flaticon.com/512/159/159469.png';"
+        />
+    </div>
+    <div class="content">
+        <div class="title"><%- post[i].ptitle%></div>
+        <div class="text"><%- post[i].pvalue%></div>
+        <div class="info"><%- post[i].pdate%> · n개의 댓글</div>
+    </div>
+    <div class="user">
+        <div class="writer">
+            <span class="img"></span>
+            <span class="name">by <strong><%- post[i].pwriter %></strong></span>
+        </div>
+        <div class="like">
+            <svg width="12" height="12" viewBox="0 0 24 24">
+                <path
+                    fill="currentColor"
+                    d="M18 1l-6 4-6-4-6 5v7l12 10 12-10v-7z"
+                ></path>
+            </svg>
+            <span class="count">000</span>
+        </div>
+    </div>
+</div>
