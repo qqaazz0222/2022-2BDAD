@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <% include ./head.ejs %>
+    <style>
+        .wrapcard {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    </style>
     <body>
-        <% include ./navbar.ejs%> <% include ./card.ejs%>
+        <% include ./navbar.ejs%>
+        <div class="wrapcard">
+            <% for(var i = 0; i < posts.length; i++) { %>
+            <a href="post/<%- posts[i].pid %>"> <% include ./card.ejs%> </a>
+            <% } %>
+        </div>
     </body>
 </html>
