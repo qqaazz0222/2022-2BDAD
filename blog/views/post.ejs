@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <% include ./head.ejs %>
+    <style>
+        .posttitle {
+            font-size: 36px;
+            width: 100%;
+        }
+        .postvalue {
+            font-size: 14px;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
     <body>
         <% include ./navbar.ejs%>
         <h1>포스트</h1>
-        <form action="/post/add" method="post">
+        <form action="/post/create" method="post">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1">제목</span>
                 <input
                     name="posttitle"
                     type="text"
-                    class="form-control"
+                    class="posttitle"
                     placeholder="제목을 입력하세요..."
                     aria-label="Username"
                     aria-describedby="basic-addon1"
@@ -20,7 +31,7 @@
                 <span class="input-group-text">내용</span>
                 <textarea
                     name="postvalue"
-                    class="form-control"
+                    class="postvalue"
                     placeholder="내용을 입력하세요..."
                     aria-label="With textarea"
                 ></textarea>
