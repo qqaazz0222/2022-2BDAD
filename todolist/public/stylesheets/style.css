@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Batang";
+    font-weight: 600;
+    src: url("/fonts/KoPub Batang B.ttf");
+}
+
+@font-face {
+    font-family: "Batang";
+    font-weight: 500;
+    src: url("/fonts/KoPub Batang M.ttf");
+}
+
+@font-face {
+    font-family: "Batang";
+    font-weight: 400;
+    src: url("/fonts/KoPub Batang L.ttf");
+}
+
+@font-face {
+    font-family: "Dotum";
+    font-weight: 600;
+    src: url("/fonts/KoPub Dotum B.ttf");
+}
+
+@font-face {
+    font-family: "Dotum";
+    font-weight: 500;
+    src: url("/fonts/KoPub Dotum M.ttf");
+}
+
+@font-face {
+    font-family: "Dotum";
+    font-weight: 400;
+    src: url("/fonts/KoPub Dotum L.ttf");
+}
+
+:root {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --gray-300: #999999;
+    --gray-500: #666666;
+    --gray-700: #333333;
+    --blue: #357df9;
+    --red-l: #fa9797;
+    --red: #ff7a7a;
+    --red-d: #dd3c3c;
+    --shadow: #ddd;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    background: var(--secondary);
+    font-size: 16px;
+    font-family: "Dotum";
+    color: var(--primary);
+}
+
+body {
+    width: 100vw;
+    max-width: 960px;
+}
+
+.material-icons {
+    font-size: .75rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+}
+
+.wrap-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.wrap-navbar>.logo {
+    font-weight: 600;
+}
+
+.btn {
+    padding: .5rem .75rem;
+    background: var(--primary);
+    color: var(--secondary);
+    border: 1px solid var(--primary);
+    border-radius: 2rem;
+    transition: all .3s;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.do,
+.done {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list>.item {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+    padding: 1.5rem;
+    background: var(--secondary);
+    border-radius: .5rem;
+    box-shadow: 0 .25rem 1rem var(--shadow);
+}
+
+.item>.item-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item>.item-header>.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.item>.item-header>.func {
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.item>.item-header>.func>.btn:last-child {
+    background: var(--red-l);
+    border: 1px solid var(--red-l);
+    color: var(--red-d);
+}
+
+.item>.item-header>.func>.btn:last-child:hover {
+    background: var(--red-d);
+    border: 1px solid var(--red-d);
+    color: #ffffff;
+}
+
+.item>.item-body {
+    font-size: .875rem;
+}
+
+.item>.item-body>.deadline {
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.item>.item-body {
+    margin-bottom: .5rem;
+}
+
+.item>.item-footer {
+    color: var(--gray-500);
+    font-size: .875rem;
+}

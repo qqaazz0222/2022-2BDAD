@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+    <body>
+        <div class="wrap-navbar">
+            <div class="logo">TODO LIST</div>
+            <button class="btn" onclick="switchmode()">
+                <span class="material-icons"> dark_mode </span> 다크모드
+            </button>
+        </div>
+        <div class="do">
+            <div class="header">
+                <h1>해야할 일 목록</h1>
+                <a href="/" class="btn">+ 할일 추가</a>
+            </div>
+            <div class="list">
+                <div class="item">
+                    <div class="item-header">
+                        <div class="title">할 일 제목</div>
+                        <div class="func">
+                            <a href="" class="btn">완료</a>
+                            <a href="" class="btn">삭제</a>
+                        </div>
+                    </div>
+                    <div class="item-body">
+                        <div class="deadline">2022-01-07 12:00까지</div>
+                        <div class="text">내용</div>
+                    </div>
+                    <div class="item-footer">
+                        2022-01-01 작성 / 2022-01-03 수정
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="done">
+            <div class="header"><h1>완료한 일 목록</h1></div>
+        </div>
+    </body>
+</html>
+<script>
+    var mode = 0;
+    function switchmode() {
+        if (mode == 0) {
+            mode = 1;
+            document.documentElement.style.setProperty("--primary", "#ffffff");
+            document.documentElement.style.setProperty(
+                "--secondary",
+                "#000000"
+            );
+            document.documentElement.style.setProperty("--shadow", "#333");
+            console.log(mode);
+        } else {
+            mode = 0;
+            document.documentElement.style.setProperty("--primary", "#000000");
+            document.documentElement.style.setProperty(
+                "--secondary",
+                "#ffffff"
+            );
+            document.documentElement.style.setProperty("--shadow", "#ddd");
+            console.log(mode);
+        }
+    }
+</script>
